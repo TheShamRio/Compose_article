@@ -70,3 +70,11 @@ fun ComposeArticleApp() {
         imagePainter = painterResource(R.drawable.bg_compose_background)
     )
 }
+
+@Preview(showBackground = true)
+@Composable
+fun ComposeArticleAppPreview() {
+    ComposeArticleTheme {
+        ComposeArticleApp()
+    }
+}

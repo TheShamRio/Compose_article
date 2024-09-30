@@ -33,8 +33,27 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun ArticleCard(modifier: Modifier = Modifier) {
+private fun ArticleCard(
+    title: String,
+    shortDescription: String,
+    longDescription: String,
+    modifier: Modifier = Modifier,
+) {
     Column(modifier = modifier) {
-        // Components will be added here later
+        Text(
+            text = title,
+            modifier = Modifier.padding(16.dp),
+            fontSize = 24.sp
+        )
+        Text(
+            text = shortDescription,
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp),
+            textAlign = TextAlign.Justify
+        )
+        Text(
+            text = longDescription,
+            modifier = Modifier.padding(16.dp),
+            textAlign = TextAlign.Justify
+        )
     }
 }

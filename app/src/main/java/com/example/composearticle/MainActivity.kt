@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -58,4 +59,14 @@ private fun ArticleCard(
             textAlign = TextAlign.Justify
         )
     }
+}
+
+@Composable
+fun ComposeArticleApp() {
+    ArticleCard(
+        title = stringResource(R.string.title_jetpack_compose_tutorial),
+        shortDescription = stringResource(R.string.compose_short_desc),
+        longDescription = stringResource(R.string.compose_long_desc),
+        imagePainter = painterResource(R.drawable.bg_compose_background)
+    )
 }

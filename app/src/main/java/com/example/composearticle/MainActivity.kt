@@ -37,9 +37,11 @@ private fun ArticleCard(
     title: String,
     shortDescription: String,
     longDescription: String,
+    imagePainter: Painter,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier) {
+        Image(painter = imagePainter, contentDescription = null)
         Text(
             text = title,
             modifier = Modifier.padding(16.dp),
